@@ -83,7 +83,7 @@ def steer(direction):
 
 # === Begrüßung ===
 print("🎤 Willkommen zur zweiten Challenge!")
-speak("Willkommen zur zweiten Challenge! Ich fahre jetzt meine Runde und vermeide die Ränder.")
+speak("Willkommen zur zweiten Challenge. Los geht's!")
 
 # === Starte Musik ===
 music_process = subprocess.Popen(['mpg123', '-q', music_path])
@@ -98,7 +98,7 @@ try:
             print("✅ Ziel erreicht – Stoppe Auto.")
             px.stop()
             music_process.terminate()
-            speak("Das hat wunderbar funktioniert!")
+            speak("Das hat funktioniert!")
             break
 
         frame = picam2.capture_array()
