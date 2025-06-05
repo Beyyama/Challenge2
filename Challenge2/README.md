@@ -16,3 +16,6 @@ Während der Fahrt spielt das Auto Musik ab und gibt Sprachkommentare.
 ```bash
 sudo apt update
 sudo apt install python3-picamera2 mpg123 espeak -y
+
+#setup ausführbar machen mit <chmod +x setup.sh>
+#danach starten mit <./setup.sh>
