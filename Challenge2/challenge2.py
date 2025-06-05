@@ -42,7 +42,8 @@ music_path = os.path.join(script_dir, "sound.mp3")
 def speak(text):
     """Sprachausgabe"""
     try:
-        os.system(f'espeak "{text}" 2>/dev/null')
+        os.system(f'espeak -v de+f3 -s 140 "{text}" 2>/dev/null')
+
     except:
         pass
 
@@ -83,7 +84,7 @@ def steer(direction):
 
 # === Begrüßung ===
 print("🎤 Willkommen zur zweiten Challenge!")
-speak("Willkommen zur zweiten Challenge. Los geht's!")
+speak("Willkommen zur zweiten Challenge")
 
 # === Starte Musik ===
 music_process = subprocess.Popen(['mpg123', '-q', music_path])
@@ -98,7 +99,7 @@ try:
             print("✅ Ziel erreicht – Stoppe Auto.")
             px.stop()
             music_process.terminate()
-            speak("Das hat funktioniert!")
+            speak("Das hat geklappt")
             break
 
         frame = picam2.capture_array()
